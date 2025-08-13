@@ -45,7 +45,7 @@ def play_game():
 
     print("Welcome to Snowman Meltdown!")
 
-    while True: # Loop until break
+    while True:  # Loop until break
         display_game_state(mistakes, secret_word, guessed_letters)
 
         # Get user input
@@ -71,9 +71,10 @@ def play_game():
                     won = False
                     break
             if won:
-                print(f"\nCongratulations! You guessed the word: {secret_word}")
+                print(
+                    f"\nCongratulations! You guessed the word: {secret_word}")
                 display_game_state(mistakes, secret_word, guessed_letters)
-                break # Exit loop
+                break  # Exit loop
         else:
             print("Incorrect guess!")
             mistakes += 1
@@ -82,5 +83,5 @@ def play_game():
                 display_game_state(mistakes, secret_word, guessed_letters)
                 print(
                     f"\nGame Over! The snowman melted. The word was: {secret_word}"
-                    )
-                break # Exit loop
+                )
+                break  # Exit loop
